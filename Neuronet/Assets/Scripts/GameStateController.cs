@@ -1,10 +1,14 @@
 using UnityEngine;
 
+/// <summary>
+/// Висит на GameController. Отслеживает выполнение условий окончания игровой сессии.
+/// </summary>
 public class GameStateController : MonoBehaviour
 {
     private void Start()
     {
         CharacterAttributes.SetDefaultAttributesValues();
+        CurrentGameSessionTime.time = Data.GameSessionMaxTime;
         Observer.EndGameEvent += EndGame;
     }
 
@@ -28,7 +32,7 @@ public class GameStateController : MonoBehaviour
     }
 
     /// <summary>
-    /// Таймер игровой сессии. При достижении заданного времени присуждается победа.
+    /// Таймер обратного отсчета игровой сессии. При обнулении присуждается победа.
     /// </summary>
     private void WinTimer()
     {

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Проигрывает фоновую музыку.
+/// Висит на GameController. Проигрывает фоновую музыку.
 /// </summary>
 public class MusicPlayerController : MonoBehaviour
 {

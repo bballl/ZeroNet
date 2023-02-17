@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Висит на main camera.
+/// </summary>
 public class CameraController : MonoBehaviour
 {
     /// <summary>

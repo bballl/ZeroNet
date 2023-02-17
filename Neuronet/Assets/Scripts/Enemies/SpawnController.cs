@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Висит на GameController.
+/// </summary>
 public class SpawnController : MonoBehaviour
 {
-    [SerializeField] private List<Transform> spawnPoints; // изменить
+    private List<Transform> spawnPoints;
     private Coroutine coroutine;
     private float spawnWaitTime = Data.SpawnWaitTime;
     

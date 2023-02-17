@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class AgentGunner : Enemy
 {
-    [SerializeField] protected List<Transform> WayPoints; // изменить
+    protected List<Transform> WayPoints;
     protected float WaitTime;
     protected Vector3 CurrrentWayPoint;
     protected AgentGunnerState CurrentState;
