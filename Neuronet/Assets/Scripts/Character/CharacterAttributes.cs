@@ -7,6 +7,7 @@
     internal static int experience;
     internal static bool isRegeneration;
     internal static bool isQuickFind;
+    internal static bool isQuicExperience;
 
     static CharacterAttributes()
     {
@@ -25,6 +26,7 @@
         experience = 0;
         isRegeneration = false;
         isQuickFind = false;
+        isQuicExperience = false;
     }
     
     internal static int GetDamageValue()
@@ -53,6 +55,10 @@
 
             case AbilityType.QuckFind:
                 isQuickFind = true;
+                break;
+
+            case AbilityType.QuickExperience:
+                isQuicExperience = true;
                 break;
         }
     }

@@ -19,6 +19,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Button extraDamageAbilityButton;
     [SerializeField] private Button regenerationAbilityButton;
     [SerializeField] private Button quickFindAbilityButton;
+    [SerializeField] private Button quickExperienceAbilityButton;
 
     private bool isStartingAbilitySelection;
 
@@ -35,6 +36,7 @@ public class UIController : MonoBehaviour
         extraDamageAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.ExtraDamage));
         regenerationAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.Regeneration));
         quickFindAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.QuckFind));
+        quickExperienceAbilityButton.onClick.AddListener(() => ChooseAbility(AbilityType.QuickExperience));
 
         Observer.UIDataUpdateEvent += ChangeDataView;
         Observer.AbilitySelectionEvent += OpenAbilitiesPanel;
@@ -130,6 +132,11 @@ public class UIController : MonoBehaviour
                 quickFindAbilityButton.onClick.RemoveAllListeners();
                 quickFindAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
                 break;
+
+            case AbilityType.QuickExperience:
+                quickExperienceAbilityButton.onClick.RemoveAllListeners();
+                quickExperienceAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
+                break;
         }
     }
 
@@ -140,5 +147,5 @@ public class UIController : MonoBehaviour
     {
         new ChangeScene().LoadScene((int)Scenes.MainMenu);
     }
-    
+
 }

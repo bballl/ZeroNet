@@ -76,6 +76,10 @@ public class PlayerController : MonoBehaviour
     private void GetExperience(int experience)
     {
         CharacterAttributes.experience += experience;
+        
+        if (CharacterAttributes.isQuicExperience)
+            CharacterAttributes.experience += Data.QuickExperienceValue;
+        
         Observer.UIDataUpdateEvent.Invoke();
     }
 
