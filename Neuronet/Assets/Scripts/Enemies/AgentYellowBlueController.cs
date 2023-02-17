@@ -10,8 +10,6 @@ public class AgentYellowBlueController : Enemy
         Defense = Data.AgentYellowBlueDefense;
         ContactDamage= Data.AgentYellowBlueContactDamage;
         Experience= Data.AgentYellowBlueExperience;
-        
-        //EnemyMovement = new EnemyMovement(rb, transform, Speed);
     }
 
     private void FixedUpdate()

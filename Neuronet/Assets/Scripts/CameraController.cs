@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -8,12 +7,6 @@ public class CameraController : MonoBehaviour
     /// </summary>
     [SerializeField] Transform characterTransform;
     [SerializeField] private Vector3 offset;
-
-    private void Awake()
-    {
-        //Observer.ObstracleContact += Stop;
-        //Observer.FinishTriggerContact += Stop;
-    }
 
     /// <summary>
     /// Следование за игроком.
@@ -26,17 +19,9 @@ public class CameraController : MonoBehaviour
     /// <summary>
     /// Прекращения следования за игроком.
     /// </summary>
-    private void Stop()
-    {
-        characterTransform = transform;
-        offset = Vector3.zero;
-    }
-
-
-
-    private void OnDestroy()
-    {
-        //Observer.ObstracleContact -= Stop;
-        //Observer.FinishTriggerContact -= Stop;
-    }
+    //private void Stop()
+    //{
+    //    characterTransform = transform;
+    //    offset = Vector3.zero;
+    //}
 }

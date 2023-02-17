@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-/// <summary>
+﻿/// <summary>
 /// Проверка возможности повысить уровень персонажа.
 /// </summary>
 internal class CheckLevelUp
@@ -12,7 +10,6 @@ internal class CheckLevelUp
         {
             levelValue = levelValue * 2;
 
-            Debug.Log($"LevelValue = {levelValue}");
             return true;
         }
         else

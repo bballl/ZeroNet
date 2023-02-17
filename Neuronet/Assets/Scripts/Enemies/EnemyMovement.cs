@@ -2,7 +2,6 @@ using UnityEngine;
 
 public sealed class EnemyMovement
 {
-
     private Rigidbody rb;
     private Transform enemyTransform;
     private Transform playerTransform;

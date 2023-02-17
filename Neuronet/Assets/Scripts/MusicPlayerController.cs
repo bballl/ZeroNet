@@ -27,7 +27,7 @@ public class MusicPlayerController : MonoBehaviour
             return;
         
         index++;
-        if(index >= clips.Length)
+        if(index >= clips.Length - 1)
             index= 0;
         
         audioSource.clip = clips[index];

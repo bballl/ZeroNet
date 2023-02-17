@@ -73,9 +73,4 @@ public class AgentOrangeGunnerController : AgentGunner
         yield return new WaitForSeconds(WaitTime);
         ChangeState();
     }
-
-    //private void OnDestroy()
-    //{
-    //    StopAllCoroutines();
-    //}
 }

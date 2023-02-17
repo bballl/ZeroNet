@@ -21,6 +21,4 @@ public class BulletController : MonoBehaviour
         var particleSystem = GameObject.Instantiate(Resources.Load<ParticleSystem>("BulletDestroyParticleSystem"), position, Quaternion.identity);
         particleSystem.Play();
     }
-    
-    
 }

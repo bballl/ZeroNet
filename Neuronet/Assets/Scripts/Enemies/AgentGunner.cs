@@ -7,13 +7,6 @@ public abstract class AgentGunner : Enemy
     protected float WaitTime;
     protected Vector3 CurrrentWayPoint;
     protected AgentGunnerState CurrentState;
-
-    //protected void AgentGunnerInit()
-    //{
-    //    BasisInit();
-    //    GetAllWayPoints();
-    //    ChangeState();
-    //}
     
     /// <summary>
     /// Получить путевые точки.
@@ -47,8 +40,4 @@ public abstract class AgentGunner : Enemy
         if (CurrentState == AgentGunnerState.Move)
             Rb.AddForce(transform.forward * Time.deltaTime * Speed, ForceMode.Impulse);
     }
-
-
-
-
 }

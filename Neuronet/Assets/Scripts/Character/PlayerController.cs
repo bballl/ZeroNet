@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -112,6 +109,4 @@ public class PlayerController : MonoBehaviour
         if (result)
             Observer.AbilitySelectionEvent.Invoke();
     }
-
-    
 }

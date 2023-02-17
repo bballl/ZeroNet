@@ -44,6 +44,5 @@ internal class Regeneration
             currentTime = 0;
             return true;
         }
-            
     }
 }

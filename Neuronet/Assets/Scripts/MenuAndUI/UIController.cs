@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private Text experienceValueText;
     [SerializeField] private Text timerText;
     [SerializeField] private Text infoText;
+    [SerializeField] private Text accompanyingText;
 
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject abilitiesPanel;
@@ -109,6 +110,7 @@ public class UIController : MonoBehaviour
     /// </summary>
     private void ChooseAbility(AbilityType type)
     {
+        accompanyingText.text = "Повышение уровня!";
         Observer.AbilitiyApplyEvent.Invoke(type);
 
         switch (type)
@@ -138,6 +140,8 @@ public class UIController : MonoBehaviour
                 quickExperienceAbilityButton.GetComponentInChildren<Text>().text = "Выбрано";
                 break;
         }
+
+        ClosePanel();
     }
 
     /// <summary>
@@ -147,5 +151,4 @@ public class UIController : MonoBehaviour
     {
         new ChangeScene().LoadScene((int)Scenes.MainMenu);
     }
-
 }
