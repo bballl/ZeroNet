@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Проигрывает фоновую музыку.
 /// </summary>
-public class MusicPlayer : MonoBehaviour
+public class MusicPlayerController : MonoBehaviour
 {
     [SerializeField] private AudioClip[] clips;
     private AudioSource audioSource;

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private CharacterMovement characterMovement;
     private InputController inputController;
     private Regeneration regeneration;
+    private CheckLevelUp levelUp;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         inputController = new InputController();
         characterMovement = new CharacterMovement(transform, rb);
         regeneration = new Regeneration();
+        levelUp = new CheckLevelUp();
 
         Observer.DamageReceivedEvent += GetDamage;
         Observer.ExperienceReceivedEvent += GetExperience;
@@ -79,7 +81,8 @@ public class PlayerController : MonoBehaviour
         
         if (CharacterAttributes.isQuicExperience)
             CharacterAttributes.experience += Data.QuickExperienceValue;
-        
+
+        CheckLevelUp();
         Observer.UIDataUpdateEvent.Invoke();
     }
 
@@ -97,6 +100,17 @@ public class PlayerController : MonoBehaviour
                 Observer.UIDataUpdateEvent.Invoke();
             }
         }
+    }
+
+    /// <summary>
+    /// Проверка выполнения условий повышения уровня. Если условия выполнены, повышается уровень персонажа и стартует выбор новой способности.
+    /// </summary>
+    private void CheckLevelUp()
+    {
+        var result =  levelUp.Check(CharacterAttributes.experience);
+        
+        if (result)
+            Observer.AbilitySelectionEvent.Invoke();
     }
 
     

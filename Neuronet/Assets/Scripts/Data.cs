@@ -7,6 +7,7 @@ internal struct Data
     public static readonly float CharacterRotationSpeed = 10f;
     public static readonly int CharacterSpeed = 5;
     public static readonly int CharacterDefense = 200;
+    public static readonly int CharacterLevelUpExperienceValue = 25;
 
     //оружие персонажа
     public static readonly int BulletSpeed = 1;

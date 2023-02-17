@@ -9638,10 +9638,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 794473237}
+  - component: {fileID: 794473239}
   - component: {fileID: 794473236}
   - component: {fileID: 794473238}
   - component: {fileID: 794473240}
-  - component: {fileID: 794473239}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -12427,6 +12427,7 @@ MonoBehaviour:
   extraDamageAbilityButton: {fileID: 419363246}
   regenerationAbilityButton: {fileID: 1027692372}
   quickFindAbilityButton: {fileID: 718068892}
+  quickExperienceAbilityButton: {fileID: 1508317444}
 --- !u!4 &1429136454
 Transform:
   m_ObjectHideFlags: 0
@@ -12741,7 +12742,7 @@ GameObject:
   - component: {fileID: 1508317445}
   - component: {fileID: 1508317444}
   m_Layer: 5
-  m_Name: Ability(5)
+  m_Name: QuickExperienceButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15166,7 +15167,7 @@ GameObject:
   - component: {fileID: 2101440160}
   - component: {fileID: 2101440159}
   m_Layer: 5
-  m_Name: AbilityText
+  m_Name: QuickExperienceButtomText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15225,7 +15226,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ability (5)
+  m_Text: QuickExperience
 --- !u!222 &2101440160
 CanvasRenderer:
   m_ObjectHideFlags: 0
